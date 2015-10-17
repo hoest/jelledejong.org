@@ -1,0 +1,71 @@
+doctype html
+html
+
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='description of your site')
+    meta(name='author', content= 'author of the site')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='google-site-verification', content='RUtFfgXVaFU-8yVndLk7v3ByQrTeLtGVVbzsOicRgE4')
+
+    title jelledejong.org
+
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='//fonts.googleapis.com/css?family=Bangers|Open+Sans|Roboto:400,300,100,500,700', rel='stylesheet', type='text/css')
+    != css()
+
+  body
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-188573-2', 'auto');
+      ga('send', 'pageview');
+
+    .wrapper-header
+      header
+        h1 jelle de jong.org
+        h2 A Dutch software engineer with a social life ;)
+
+        nav
+          ul.social-links
+            li.fa-stack.fa-lg
+              a(href='http://www.facebook.com/jelle', title='Bekijk mijn Facebook pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-facebook.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='http://www.twitter.com/hoest', title='Bekijk mijn Twitter pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-twitter.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='https://www.linkedin.com/in/dejongjelle', title='Bekijk mijn LinkedIn pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-linkedin.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='https://plus.google.com/+JelledeJong1979', title='Bekijk mijn Google+ pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-google-plus.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='http://www.github.com/hoest', title='Bekijk mijn Github pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-github.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='http://www.instagram.com/hoest79', title='Bekijk mijn Instagram pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-instagram.fa-stack-1x
+            li.fa-stack.fa-lg
+              a(href='https://www.flickr.com/photos/hoest/', title='Bekijk mijn Flickr pagina')
+                i.fa.fa-square-o.fa-stack-2x
+                i.fa.fa-flickr.fa-stack-1x
+    .wrapper-main
+      main
+        .my-picture
+          .bordered-img
+            img(src='img/foto-jelledejong-org.jpg')
+        .my-story
+          block content
+
+    != js()
