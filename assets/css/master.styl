@@ -13,7 +13,7 @@ body
 h1, h2, h3, h4, h5, h6
   font-weight: 300
 
-main, header
+main, header, section
   center(980px)
   padding: 1rem
 
@@ -80,8 +80,32 @@ header
           border: 3px solid $yellow
           border-radius: 50%
 
+.wrapper-contact
+  background-color $yellow
+  color $dark_blue
+
+  a
+    color $dark_gray
+
+.wrapper-portfolio
+  background-color $light_gray
+  color $dark_blue
+
+  section
+    .my-portfolio
+      .slides
+        .slide
+          margin .75em
+          box-shadow 0 0 .5em rgba(0, 0, 0, .5)
+
+          img
+            border 1px solid $light_gray
+
+          :hover img
+            border 1px solid $yellow
+
 +above(600px)
-  main
+  main, section
     display: flex
 
   .my-picture
@@ -89,3 +113,6 @@ header
 
   .my-story
     column(2/3)
+
+  .my-portfolio, .my-contact
+    column(1/1)

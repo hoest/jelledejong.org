@@ -1,5 +1,10 @@
 extends layout
 
+mixin portfolio(title, url, picture)
+  div.slide
+    a(href=url, target='_blank', title=title + ' (bekijk de site)')
+      img(src='img/portfolio/' + picture, alt=title, width=320, height=200)
+
 block content
   h2 Wie ben ik?
   .summary
@@ -56,3 +61,39 @@ block content
     [13]: https://www.python.org/
     [14]: http://flask.pocoo.org/
     [15]: http://www.postgresql.org/
+
+block portfolio
+  h2 Portfolio
+  .portfolio
+    :marked
+      Hieronder zie je een greep uit mijn werk van de afgelopen jaren, zowel
+      een deel van het werk voor mijn werkgevers als mijn eigen werk.
+
+    div.slides
+      +portfolio('jelledejong.org', 'http://www.jelledejong.org/', 'portfolio-0001.png')
+      +portfolio('Ster Reclame (Ster)', 'http://www.ster.nl/', 'portfolio-0002.png')
+      +portfolio('WeLoveReclame (Ster)', 'http://www.welovereclame.nl/', 'portfolio-0003.png')
+      +portfolio('Sportzomer 2016 (Ster)', 'http://www.sportzomer2016.nl/', 'portfolio-0004.png')
+      +portfolio('De Jong Accountants', 'http://www.dejongaccountants.nl/', 'portfolio-0006.png')
+      +portfolio('KNVB Dataservice API plugin WordPress', 'https://github.com/hoest/knvb-api/', 'portfolio-0007.png')
+      +portfolio('LedGo Interior Panels', 'http://www.ledgointeriorpanels.nl/', 'portfolio-0008.png')
+      +portfolio('Kwaliteitswijzer Kinderopvang Amsterdam (InfoProjects BV)', 'http://www.kwaliteitswijzerkinderopvang.amsterdam.nl/', 'portfolio-0005.png')
+      +portfolio('Provincie Drenthe (InfoProjects BV)', 'http://www.provincie.drenthe.nl/', 'portfolio-0009.png')
+      +portfolio('WaterOpleidingen (InfoProjects BV)', 'http://www.wateropleidingen.nl/', 'portfolio-0010.png')
+      +portfolio('Online Dagboek', 'http://www.online-dagboek.nl/', 'portfolio-0011.png')
+      +portfolio('Amitie Baarn', 'http://www.amitiebaarn.nl/', 'portfolio-0012.png')
+      +portfolio('Newborn', 'http://www.newborn.nl/', 'portfolio-0013.png')
+      +portfolio('Stalhouderij Klein Middelwijck', 'http://www.stalhouderijkleinmiddelwijck.nl', 'portfolio-0014.png')
+      +portfolio('Puur Jij Schoonheidssalon', 'http://www.puurjijschoonheidssalon.nl/', 'portfolio-0015.png')
+      +portfolio('Sint Aan Huis', 'http://www.sint-aan-huis.nl', 'portfolio-0016.png')
+      +portfolio('Colthoff Communicatie', 'http://www.colthoffcommunicatie.nl/', 'portfolio-0017.png')
+      +portfolio('Plattelandsgenotsknotsen', 'http://www.plattelandsgenotsknotsen.nl', 'portfolio-0018.png')
+      +portfolio('Kantoorruimte Huren', 'http://www.kantoorruimte-huren.nl/', 'portfolio-0019.png')
+
+block contact
+  h2 Contact opnemen?
+  :marked
+    Wilt u contact opnemen of heeft u vragen? U kunt mij gerust even een
+    [mail][1] sturen
+
+    [1]: mailto:jelle@hoest.nl?Subject=Mail%20via%20jelledejong.org
